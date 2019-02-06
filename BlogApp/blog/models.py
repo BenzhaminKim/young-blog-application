@@ -14,3 +14,26 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Company(models.Model):
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
+
+class Languages(models.Model):
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
+
+class Programmer(models.Model):
+    name = models.CharField(max_length=20)
+    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    languages = models.ManyToManyField(Languages)
+
+    def __str__(self):
+        return self.name

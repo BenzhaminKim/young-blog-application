@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'BlogApp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'chlsvamc',
+        'USER': 'chlsvamc',
+        'PASSWORD': 'PEIO6bd9ktyIV7UxCTujZbN5P7z-puxM',
+        'HOST': 'elmer.db.elephantsql.com',
+        'PORT': '5432'
     }
 }
 
