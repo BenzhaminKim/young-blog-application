@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+
+{% block title %} {{post.title}} {% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+    <div class="p-0 bg-skyblue border-bottom" style="background-color:#F5F8FA">
+        <header class="row p-5 justify-content-center">
+            <div class=" col col-lg-12 col-sm-12 col-12 bd-highlight text-center">
+                <h6> {{post.categories}} &gt; {{post.languages}}</h6>
+                <h1> {{post.title}} </h1>
+            </div>
+            {%if user.is_authenticated %}
+            <a class="btn btn-warning" href="{% url 'blog-edit' pk=post.pk %}">Edit</a>
+            {% endif %}
+        </header>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-lg-12 p-3">
+            <p> {{post.content}} </p>
+        </div>
+    </div>
+</div>
+{% endblock content %}

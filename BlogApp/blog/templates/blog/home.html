@@ -1,4 +1,43 @@
 {% extends "blog/base.html" %}
+
+{% load static %}
+
+{% block title %}Younghwi Kim{% endblock %}
+
 {% block content %}
-home
-{% endblock content %}
+<div class="container-fluid p-0 bg-skyblue border-bottom" style="background-color:#F5F8FA">
+    <header class=" row p-5 justify-content-center">
+        <div class=" col col-lg-12 col-sm-12 col-12 bd-highlight text-center">
+            <img class="img-thumbnail rounded-circle" src="{% static 'images/youngkim-kim.jpeg' %}" alt="" />
+            <h1 class="text-weight-bold">Younghwi Kim</h1>
+            <h2>Programmer</h2>
+            <h3>Language</h3>
+            <h6>C,C++,c#,PHP,Java,JavaScript,
+                JQuery,HTML5,CSS3,React,Bootstrap</h6>
+        </div>
+    </header>
+</div>
+
+<div class="container">
+    <div class="row justify-content-md-center pt-4">
+        <div class="col col-lg-6 col-sm-12 col-12">
+            <h4>About me</h4>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia ut
+                neque iste incidunt sit. Mollitia maiores, minima consectetur dolorem,
+                numquam eius accusamus ipsa vero earum illo enim amet rem perferendis?
+            </p>
+        </div>
+
+        <div class="col col-lg-6 col-sm-12 col-12">
+            <h4>Contact</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+                necessitatibus deleniti debitis odio quisquam laudantium natus fugiat
+                architecto id sed quibusdam, adipisci, repellat molestiae ad commodi
+                sit, veritatis cum reprehenderit.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,6 +1,13 @@
 {% extends "blog/base.html" %}
 {% block content %}
-
+<!-- <form action="#" method="POST">
+    {% csrf_token %}
+    {{ form.title }}
+    {{ form.content }}
+    {% if user.is_authenticated %}
+    <button type="submit" class="btn btn-primary">Submit</button>
+    {% endif %}
+</form> -->
 <div class="container-fluid">
     <form action="#" method="POST">
         {% csrf_token %}

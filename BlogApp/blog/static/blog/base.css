@@ -1,3 +1,7 @@
 #something {
     color: black;
 }
+
+.sky-blue {
+    background-color: #000 !important;
+}
